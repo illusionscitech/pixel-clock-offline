@@ -18,6 +18,22 @@
 
 外壳使用积木设计，光栅使用雪糕杆（不建议太费力），面板为茶色亚克力（不过建议使用黑茶色，看起来更有质感）
 
+✔️The project program file comes from https://github.com/yinbaiyuan/AWTRIX2.0-Controller based on the AWTRIX2.0 version, the offline version has been modified
+
+This time, based on the original version, the following modifications have been made:
+1. Added SHT30 temperature and humidity sensor, from displaying temperature and humidity to adding dynamic display of air pressure.
+2. The multi-step brightness display of the light sensor has been added, so that it can be displayed at the lowest brightness even in a dark environment
+3. Increase the weather icon display, currently it can display "sunny", "overcast", "cloudy", "rain", "snow", "fog", etc.
+4. Added boot light music, (do not choose to delete the corresponding file of the memory card)
+5. Two animations have been added to offline mode
+6. The time and date display changes from a single white to a random color display to enhance the sense of atmosphere
+
+The first version of the designed pcb file is in the folder, this version of the MCU uses wemos mini (master control esp8266)
+Peripheral modules include RTC clock module, DFPLAYER music player module, SHT30 temperature and humidity module, bme280 module, etc. All modules use detachable design,
+
+The shell is designed with building blocks, the grating is made of ice cream sticks (it is not recommended to be too laborious), and the panel is brown acrylic (but it is recommended to use dark brown, which looks more textured)
+
+<img src="https://github.com/illusionscitech/pixel-clock-offline/blob/main/%E6%AD%A3%E9%9D%A2.jpg" width=50% height=50%>
 原版配置：
 1.修改B站UID
 打开 B 站自己的频道，就可以在 URL 中看到自己频道的 ID
