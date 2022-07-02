@@ -145,7 +145,104 @@ void weatherEffect(unsigned int areaCount, unsigned int frameCount)
 {
   if (areaCount == 0)
   {
-    APC.drawColorIndexFrame(weatherColorArr, 8, 8, weatherPixels);
+   
+    if ((weatherInfo[0]==100)||(weatherInfo[0]==150)){  // 晴
+      APC.plBegin(6).plCoord(0, 0,false).plCoord(7, 7,false).plColor(255, 193, 6).plCallback();   //  黄
+      APC.plBegin(6).plCoord(3, 0,false).plCoord(3, 7,false).plColor(255, 193, 6).plCallback();
+      APC.plBegin(6).plCoord(4, 0,false).plCoord(4, 7,false).plColor(255, 193, 6).plCallback();
+      APC.plBegin(6).plCoord(2, 2,false).plCoord(5, 2,false).plColor(255, 193, 6).plCallback();
+      APC.plBegin(6).plCoord(2, 5,false).plCoord(5, 5,false).plColor(255, 193, 6).plCallback();
+      APC.plBegin(6).plCoord(0, 3,false).plCoord(7, 3,false).plColor(255, 193, 6).plCallback();
+      APC.plBegin(6).plCoord(0, 4,false).plCoord(7, 4,false).plColor(255, 193, 6).plCallback();
+      APC.plBegin(6).plCoord(0, 7,false).plCoord(0, 7,false).plColor(255, 193, 6).plCallback();
+      APC.plBegin(6).plCoord(1, 6,false).plCoord(1, 6,false).plColor(255, 193, 6).plCallback();
+      APC.plBegin(6).plCoord(6, 1,false).plCoord(6, 1,false).plColor(255, 193, 6).plCallback();
+      APC.plBegin(6).plCoord(7, 0,false).plCoord(7, 0,false).plColor(255, 193, 6).plCallback();
+
+    }
+    else if ((weatherInfo[0] ==104)|| (weatherInfo[0] ==154)){   //阴
+      //Serial.println(weatherInfo[0]);
+      APC.plBegin(6).plCoord(3, 3,false).plCoord(3, 3,false).plColor().plCallback();   //白
+      APC.plBegin(6).plCoord(2, 4,false).plCoord(4, 4,false).plColor().plCallback();
+      APC.plBegin(6).plCoord(1, 5,false).plCoord(6, 5,false).plColor().plCallback(); 
+      APC.plBegin(6).plCoord(2, 2,false).plCoord(4, 2,false).plColor(26, 181, 237).plCallback();  //蓝
+      APC.plBegin(6).plCoord(2, 3,false).plCoord(2, 3,false).plColor(26, 181, 237).plCallback();  //蓝
+      APC.plBegin(6).plCoord(0, 4,false).plCoord(1, 4,false).plColor(26, 181, 237).plCallback();  //蓝
+      APC.plBegin(6).plCoord(0, 5,false).plCoord(0, 5,false).plColor(26, 181, 237).plCallback();  //蓝
+      APC.plBegin(6).plCoord(0, 6,false).plCoord(7, 6,false).plColor(26, 181, 237).plCallback();
+      APC.plBegin(6).plCoord(4, 3,false).plCoord(4, 3,false).plColor(26, 181, 237).plCallback();
+      APC.plBegin(6).plCoord(5, 4,false).plCoord(6, 4,false).plColor(26, 181, 237).plCallback();
+      APC.plBegin(6).plCoord(7, 5,false).plCoord(7, 5,false).plColor(26, 181, 237).plCallback();
+    }
+    else if ((weatherInfo[0] == 300)||(weatherInfo[0] ==301)||(weatherInfo[0] ==302)||(weatherInfo[0] ==303)||(weatherInfo[0] ==304)||(weatherInfo[0] ==305||(weatherInfo[0] ==306)||(weatherInfo[0] ==307)||(weatherInfo[0] ==308)||(weatherInfo[0] ==309)||(weatherInfo[0] ==310)||(weatherInfo[0] ==311)||(weatherInfo[0] ==312)||(weatherInfo[0] ==313)||(weatherInfo[0] ==314)||(weatherInfo[0] ==315)||(weatherInfo[0] ==316)||(weatherInfo[0] ==317)||(weatherInfo[0] ==318)||(weatherInfo[0] ==350)||(weatherInfo[0] ==351)||(weatherInfo[0] ==399))){   //雨
+      //Serial.println(weatherInfo[0]);     //雨
+      APC.plBegin(6).plCoord(2, 2,false).plCoord(3, 2,false).plColor().plCallback();   //白
+      APC.plBegin(6).plCoord(1, 3,false).plCoord(5, 3,false).plColor().plCallback();
+      APC.plBegin(6).plCoord(2, 1,false).plCoord(3, 1,false).plColor(26, 181, 237).plCallback();  //蓝
+      APC.plBegin(6).plCoord(1, 2,false).plCoord(1, 2,false).plColor(26, 181, 237).plCallback();  //蓝
+      APC.plBegin(6).plCoord(0, 3,false).plCoord(0, 3,false).plColor(26, 181, 237).plCallback();  //蓝
+      APC.plBegin(6).plCoord(0, 4,false).plCoord(7, 4,false).plColor(26, 181, 237).plCallback();  //蓝
+      APC.plBegin(6).plCoord(4, 2,false).plCoord(5, 2,false).plColor(26, 181, 237).plCallback();
+      APC.plBegin(6).plCoord(6, 3,false).plCoord(7, 3,false).plColor(26, 181, 237).plCallback();
+      APC.plBegin(6).plCoord(0, 7,false).plCoord(0, 7,false).plColor(0, 255, 255).plCallback();   //  浅蓝
+      APC.plBegin(6).plCoord(1, 6,false).plCoord(2, 7,false).plColor(0, 255, 255).plCallback();
+      APC.plBegin(6).plCoord(2, 5,false).plCoord(4, 7,false).plColor(0, 255, 255).plCallback();
+      APC.plBegin(6).plCoord(4, 5,false).plCoord(5, 6,false).plColor(0, 255, 255).plCallback();
+      APC.plBegin(6).plCoord(6, 5,false).plCoord(6, 5,false).plColor(0, 255, 255).plCallback();
+
+    }
+    else if ((weatherInfo[0] == 101)||(weatherInfo[0] ==102)||(weatherInfo[0] ==103)||(weatherInfo[0] ==151)||(weatherInfo[0] ==152)||(weatherInfo[0] ==153)){   //多云
+      //Serial.println(weatherInfo[0]);
+      APC.plBegin(6).plCoord(2, 5,false).plCoord(3, 5,false).plColor().plCallback();   //白
+      APC.plBegin(6).plCoord(1, 6,false).plCoord(5, 6,false).plColor().plCallback();
+      APC.plBegin(6).plCoord(2, 4,false).plCoord(3, 4,false).plColor(26, 181, 237).plCallback();  //蓝
+      APC.plBegin(6).plCoord(1, 5,false).plCoord(1, 5,false).plColor(26, 181, 237).plCallback();  //蓝
+      APC.plBegin(6).plCoord(0, 6,false).plCoord(0, 6,false).plColor(26, 181, 237).plCallback();  //蓝
+      APC.plBegin(6).plCoord(0, 7,false).plCoord(7, 7,false).plColor(26, 181, 237).plCallback();  //蓝
+      APC.plBegin(6).plCoord(4, 5,false).plCoord(5, 5,false).plColor(26, 181, 237).plCallback();
+      APC.plBegin(6).plCoord(6, 6,false).plCoord(7, 6,false).plColor(26, 181, 237).plCallback();
+      APC.plBegin(6).plCoord(1, 1,false).plCoord(2, 2,false).plColor(255, 193, 6).plCallback();   //  黄
+      APC.plBegin(6).plCoord(2, 2,false).plCoord(6, 2,false).plColor(255, 193, 6).plCallback();
+      APC.plBegin(6).plCoord(2, 3,false).plCoord(6, 3,false).plColor(255, 193, 6).plCallback();
+      APC.plBegin(6).plCoord(4, 4,false).plCoord(7, 4,false).plColor(255, 193, 6).plCallback();
+      APC.plBegin(6).plCoord(7, 1,false).plCoord(7, 1,false).plColor(255, 193, 6).plCallback();
+      APC.plBegin(6).plCoord(1, 4,false).plCoord(1, 4,false).plColor(255, 193, 6).plCallback();
+      APC.plBegin(6).plCoord(4, 0,false).plCoord(4, 1,false).plColor(255, 193, 6).plCallback();
+
+    }
+    else if ((weatherInfo[0] == 400)||(weatherInfo[0] ==401)||(weatherInfo[0] ==402)||(weatherInfo[0] ==403)||(weatherInfo[0] ==404)||(weatherInfo[0] ==405||(weatherInfo[0] ==406)||(weatherInfo[0] ==407)||(weatherInfo[0] ==408)||(weatherInfo[0] ==409)||(weatherInfo[0] ==410)||(weatherInfo[0] ==456)||(weatherInfo[0] ==457)||(weatherInfo[0] ==499))){   //雪
+      //Serial.println(weatherInfo[0]);     //雪
+      APC.plBegin(6).plCoord(2, 2,false).plCoord(3, 2,false).plColor(175,255,253).plCallback();   //青蓝
+      APC.plBegin(6).plCoord(1, 3,false).plCoord(5, 3,false).plColor(175,255,253).plCallback();
+      APC.plBegin(6).plCoord(2, 1,false).plCoord(3, 1,false).plColor(26, 181, 237).plCallback();  //蓝
+      APC.plBegin(6).plCoord(1, 2,false).plCoord(1, 2,false).plColor(26, 181, 237).plCallback();  //蓝
+      APC.plBegin(6).plCoord(0, 3,false).plCoord(0, 3,false).plColor(26, 181, 237).plCallback();  //蓝
+      APC.plBegin(6).plCoord(0, 4,false).plCoord(7, 4,false).plColor(26, 181, 237).plCallback();  //蓝
+      APC.plBegin(6).plCoord(4, 2,false).plCoord(5, 2,false).plColor(26, 181, 237).plCallback();
+      APC.plBegin(6).plCoord(6, 3,false).plCoord(7, 3,false).plColor(26, 181, 237).plCallback();
+      APC.plBegin(6).plCoord(1, 5,false).plCoord(3, 7,false).plColor(175,255,253).plCallback();   //  浅蓝
+      APC.plBegin(6).plCoord(5, 5,false).plCoord(7, 7,false).plColor(175,255,253).plCallback();
+      APC.plBegin(6).plCoord(1, 7,false).plCoord(1, 7,false).plColor(175,255,253).plCallback();
+      APC.plBegin(6).plCoord(3, 5,false).plCoord(3, 5,false).plColor(175,255,253).plCallback();
+      APC.plBegin(6).plCoord(5, 7,false).plCoord(5, 7,false).plColor(175,255,253).plCallback();
+      APC.plBegin(6).plCoord(7, 5,false).plCoord(7, 5,false).plColor(175,255,253).plCallback();
+    }
+    else if ((weatherInfo[0] == 500)||(weatherInfo[0] ==501)||(weatherInfo[0] ==502)||(weatherInfo[0] ==503)||(weatherInfo[0] ==504)||(weatherInfo[0] ==507||(weatherInfo[0] ==508)||(weatherInfo[0] ==509)||(weatherInfo[0] ==510)||(weatherInfo[0] ==511)||(weatherInfo[0] ==512)||(weatherInfo[0] ==513)||(weatherInfo[0] ==514)||(weatherInfo[0] ==515))){   //雾霾
+      //Serial.println(weatherInfo[0]);     //雾霾
+      APC.plBegin(6).plCoord(2, 0,false).plCoord(3, 1,false).plColor(175,255,253).plCallback();   //青蓝
+      APC.plBegin(6).plCoord(6, 0,false).plCoord(7, 1,false).plColor(175,255,253).plCallback();
+      APC.plBegin(6).plCoord(0, 2,false).plCoord(6, 2,false).plColor(175,255,253).plCallback();   
+      APC.plBegin(6).plCoord(0, 4,false).plCoord(6, 4,false).plColor(175,255,253).plCallback();
+      APC.plBegin(6).plCoord(7, 5,false).plCoord(7, 5,false).plColor(175,255,253).plCallback();
+      APC.plBegin(6).plCoord(0, 6,false).plCoord(4, 6,false).plColor(175,255,253).plCallback();
+      APC.plBegin(6).plCoord(4, 7,false).plCoord(4, 7,false).plColor(175,255,253).plCallback();
+      APC.plBegin(6).plCoord(6, 6,false).plCoord(6, 7,false).plColor(175,255,253).plCallback();
+    }
+    
+    else {
+      APC.drawColorIndexFrame(weatherColorArr, 8, 8, weatherPixels);
+    }
+    
   }
   else if (areaCount == 1)
   {
@@ -323,7 +420,6 @@ void tetrisEffect(unsigned int areaCount, unsigned int frameCount)
 {
   int a=0;
   int b=0;
-  int c=0;
   if (frameCount < 1){
     //方块 黄色
     APC.plBegin(6).plCoord(a, b+frameCount,false).plCoord(a+1, b+frameCount,false).plColor(255, 255, 0).plCallback();
@@ -334,7 +430,7 @@ void tetrisEffect(unsigned int areaCount, unsigned int frameCount)
     APC.plBegin(6).plCoord(a+8, b+frameCount,false).plCoord(a+8, b+frameCount,false).plColor(0, 0, 204).plCallback();
     APC.plBegin(6).plCoord(a+8, b+1+frameCount,false).plCoord(a+10, b+1+frameCount,false).plColor(0, 0, 204).plCallback();
     //L 橙
-    APC.plBegin(6).plCoord(a+14, b+frameCount,false).plCoord(a+14, b+frameCount,false).plColor(102, 0, 204).plCallback();
+    APC.plBegin(6).plCoord(a+14, b+frameCount,false).plCoord(a+14, b+frameCount,false).plColor(255, 128, 0).plCallback();
     APC.plBegin(6).plCoord(a+12, b+1+frameCount,false).plCoord(a+14, b+1+frameCount,false).plColor(255, 128, 0).plCallback();
     //s 绿
     APC.plBegin(6).plCoord(a+17, b+frameCount,false).plCoord(a+18, b+frameCount,false).plColor(0, 255, 0).plCallback();
@@ -589,7 +685,7 @@ void updateWeatherInfo()
     weatherInfo[1] = nowObj["temp"].as<int>();
     weatherInfo[2] = nowObj["humidity"].as<int>();
     weatherInfo[3] = nowObj["pressure"].as<int>();
-    //Serial.println(weatherInfo[3]);
+    //Serial.println(weatherInfo[0]);
   }
 }
 
