@@ -3,6 +3,8 @@
 <b>像素时钟离线版本</b>
 <b>AWTRIX2.0-Controller-offline</b>
 
+20220706更新pcb，在wemosmini和esp12f中二选一，在板载ds1307和ds1307模块中二选一.
+
 ✔️项目程序文件源于 https://github.com/yinbaiyuan/AWTRIX2.0-Controller 基于AWTRIX2.0版本基础上做了离线版修改
 
 本次在原版基础上做了如下修改：
